@@ -1,0 +1,13 @@
+{
+  "tasks": {
+    "test": "deno run -A npm:vitest"
+  },
+  "imports": {
+    "vitest": "npm:vitest@^2.1.8",
+    "@vitest/runner": "npm:@vitest/runner@^2.1.8"
+  },
+  "compilerOptions": {
+    "lib": ["deno.ns", "deno.window"],
+    "strict": true
+  }
+}

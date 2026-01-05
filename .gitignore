@@ -1,0 +1,19 @@
+# Deno
+.deno/
+node_modules/
+
+# Coverage
+coverage/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# AI
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db
