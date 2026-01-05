@@ -1,6 +1,17 @@
-# Deno Kata Starter
+# Deno Kata Addition of fractions
 
-Project template for coding katas in TypeScript with Deno and Vitest.
+Write a program that implements the addition of fractions. Fractions must be reduced. An implementation of the greatest common divisor (GCD) is provided:
+
+function gcd(a, b) {
+  return b === 0 ? a : gcd(b, a % b);
+}
+Examples:
+
+1/2 + 1/3 = 5/6
+1/4 + 1/4 = 1/2
+
+(1*2)/(2*2) + 1/4 = 2/4 + 1/4 
+
 
 ## Tech Stack
 
@@ -22,14 +33,6 @@ deno task test
 
 This command runs Vitest in watch mode. Tests automatically re-run on every file change.
 
-## Create a new kata
 
-1. Fork this repository
-2. Define this repository as a template on GitHub
-3. Create a new repository from this template
-4. Clone the new repository
-5. Delete example files in `src/` and start your kata
 
-## License
 
-MIT
