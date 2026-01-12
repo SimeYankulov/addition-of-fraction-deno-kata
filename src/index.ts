@@ -1,23 +1,10 @@
+import {
+  createFraction,
+  Fraction,
+  scaleFraction,
+  simplifyFraction,
+} from "./fraction.ts";
 import { gcd } from "./utils/utils.ts";
-
-export type Fraction = {
-  numerator: number;
-  denominator: number;
-};
-
-const scaleFraction =
-  (mupltiplier: number) =>
-  (fraction: Fraction): Fraction => ({
-    numerator: fraction.numerator * mupltiplier,
-    denominator: fraction.denominator * mupltiplier,
-  });
-
-const simplifyFraction =
-  (divisor: number) =>
-  (fraction: Fraction): Fraction => ({
-    numerator: fraction.numerator / divisor,
-    denominator: fraction.denominator / divisor,
-  });
 
 export const addFractions = (a: Fraction, b: Fraction): Fraction => {
   if (a.denominator !== b.denominator) {
@@ -27,10 +14,10 @@ export const addFractions = (a: Fraction, b: Fraction): Fraction => {
     return addFractions(multipliedA, multipliedB);
   }
 
-  const resultBeforeSimplification = {
-    numerator: a.numerator + b.numerator,
-    denominator: a.denominator,
-  };
+  const resultBeforeSimplification = createFraction(
+    a.numerator + b.numerator,
+    a.denominator
+  );
 
   const dividor = gcd(
     resultBeforeSimplification.numerator,
